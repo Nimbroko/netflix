@@ -1,0 +1,13 @@
+user:
+  ---
+- name: Setting up webservers
+  hosts: webservers
+  become: true
+
+  tasks:
+  - name: creating user black_panther
+    ansible.builtin.user:
+      name: black_panther
+      comment: to save wakanda!
+  name: 
+  uid:
